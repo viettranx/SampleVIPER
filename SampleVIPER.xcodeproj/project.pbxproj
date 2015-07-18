@@ -14,6 +14,10 @@
 		FC80871C1B5A909900895B04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC80871B1B5A909900895B04 /* Images.xcassets */; };
 		FC80871F1B5A909900895B04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC80871D1B5A909900895B04 /* LaunchScreen.xib */; };
 		FC80872B1B5A909900895B04 /* SampleVIPERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC80872A1B5A909900895B04 /* SampleVIPERTests.m */; };
+		FC80873D1B5A996000895B04 /* CounterEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = FC80873C1B5A996000895B04 /* CounterEntity.m */; };
+		FC8087441B5A9D6200895B04 /* CounterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8087431B5A9D6200895B04 /* CounterPresenter.m */; };
+		FC8087471B5AA00900895B04 /* CounterInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8087461B5AA00900895B04 /* CounterInteractor.m */; };
+		FC80874A1B5AAC7900895B04 /* CounterWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8087491B5AAC7900895B04 /* CounterWireframe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,16 @@
 		FC8087241B5A909900895B04 /* SampleVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8087291B5A909900895B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC80872A1B5A909900895B04 /* SampleVIPERTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleVIPERTests.m; sourceTree = "<group>"; };
+		FC80873B1B5A996000895B04 /* CounterEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterEntity.h; sourceTree = "<group>"; };
+		FC80873C1B5A996000895B04 /* CounterEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterEntity.m; sourceTree = "<group>"; };
+		FC80873E1B5A9A4400895B04 /* CounterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterView.h; sourceTree = "<group>"; };
+		FC8087411B5A9C7900895B04 /* CounterInteractorIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterInteractorIO.h; sourceTree = "<group>"; };
+		FC8087421B5A9D6200895B04 /* CounterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterPresenter.h; sourceTree = "<group>"; };
+		FC8087431B5A9D6200895B04 /* CounterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterPresenter.m; sourceTree = "<group>"; };
+		FC8087451B5AA00900895B04 /* CounterInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterInteractor.h; sourceTree = "<group>"; };
+		FC8087461B5AA00900895B04 /* CounterInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterInteractor.m; sourceTree = "<group>"; };
+		FC8087481B5AAC7900895B04 /* CounterWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterWireframe.h; sourceTree = "<group>"; };
+		FC8087491B5AAC7900895B04 /* CounterWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterWireframe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +95,9 @@
 		FC80870D1B5A909900895B04 /* SampleVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				FC8087341B5A97EF00895B04 /* Modules */,
 				FC8087121B5A909900895B04 /* AppDelegate.h */,
 				FC8087131B5A909900895B04 /* AppDelegate.m */,
-				FC8087151B5A909900895B04 /* ViewController.h */,
-				FC8087161B5A909900895B04 /* ViewController.m */,
 				FC8087181B5A909900895B04 /* Main.storyboard */,
 				FC80871B1B5A909900895B04 /* Images.xcassets */,
 				FC80871D1B5A909900895B04 /* LaunchScreen.xib */,
@@ -117,6 +130,73 @@
 				FC8087291B5A909900895B04 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC8087341B5A97EF00895B04 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FC8087371B5A982400895B04 /* Counter */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		FC8087351B5A980B00895B04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC8087151B5A909900895B04 /* ViewController.h */,
+				FC8087161B5A909900895B04 /* ViewController.m */,
+				FC80873E1B5A9A4400895B04 /* CounterView.h */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC8087361B5A981A00895B04 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FC8087421B5A9D6200895B04 /* CounterPresenter.h */,
+				FC8087431B5A9D6200895B04 /* CounterPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		FC8087371B5A982400895B04 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				FC80873A1B5A989D00895B04 /* Wireframe */,
+				FC8087391B5A984500895B04 /* Entity */,
+				FC8087381B5A983300895B04 /* Interactor */,
+				FC8087361B5A981A00895B04 /* Presenter */,
+				FC8087351B5A980B00895B04 /* View */,
+			);
+			name = Counter;
+			sourceTree = "<group>";
+		};
+		FC8087381B5A983300895B04 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FC8087411B5A9C7900895B04 /* CounterInteractorIO.h */,
+				FC8087451B5AA00900895B04 /* CounterInteractor.h */,
+				FC8087461B5AA00900895B04 /* CounterInteractor.m */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		FC8087391B5A984500895B04 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FC80873B1B5A996000895B04 /* CounterEntity.h */,
+				FC80873C1B5A996000895B04 /* CounterEntity.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		FC80873A1B5A989D00895B04 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				FC8087481B5AAC7900895B04 /* CounterWireframe.h */,
+				FC8087491B5AAC7900895B04 /* CounterWireframe.m */,
+			);
+			name = Wireframe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC80874A1B5AAC7900895B04 /* CounterWireframe.m in Sources */,
 				FC8087171B5A909900895B04 /* ViewController.m in Sources */,
 				FC8087141B5A909900895B04 /* AppDelegate.m in Sources */,
 				FC8087111B5A909900895B04 /* main.m in Sources */,
+				FC8087471B5AA00900895B04 /* CounterInteractor.m in Sources */,
+				FC8087441B5A9D6200895B04 /* CounterPresenter.m in Sources */,
+				FC80873D1B5A996000895B04 /* CounterEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

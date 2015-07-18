@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "CounterWireframe.h"
 
 @interface AppDelegate ()
-
+{
+    CounterWireframe *wireframe;
+}
 @end
 
 @implementation AppDelegate
@@ -17,6 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIViewController *vc = self.window.rootViewController;
+    wireframe = [[CounterWireframe alloc] init];
+    [wireframe setUpVIPERWithViewController:vc];
+    
     return YES;
 }
 

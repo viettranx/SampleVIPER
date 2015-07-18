@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CounterView.h"
 
-@interface ViewController : UIViewController
+@class CounterPresenter;
+@class CounterWireframe;
 
-
+@interface ViewController : UIViewController<CounterView>
+@property (strong, nonatomic) CounterPresenter *presenter;
+@property (strong, nonatomic) CounterWireframe *wireframe;
 @end
 
